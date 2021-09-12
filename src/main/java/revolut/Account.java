@@ -20,6 +20,14 @@ public class Account {
     }
 
     public void addFunds(double topUpAmount) {
-        this.balance += topUpAmount;
+        if (topUpAmount > 0) {
+            this.balance += topUpAmount;
+        } else {
+            System.out.println("Failed to Top Up, Negative Balance");
+        }
+    }
+
+    public void removeFunds(double removeAmount) {
+        this.balance -= removeAmount;
     }
 }
