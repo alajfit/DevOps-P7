@@ -1,8 +1,6 @@
 Feature: TopUp Account
   This feature describes various scenarios for users adding funds to their revolut account(s)
 
-  #As a user, I can topup my Revolut account using my debit card
-
   Scenario: Add money to Revolut account using debit card
     Given Danny has 10 euro in his euro Revolut account
     And Danny selects 100 euro as the topUp amount
@@ -20,12 +18,6 @@ Feature: TopUp Account
     When Danny tops up
     Then The new balance of his euro account should now be 250
 
-
-
-  #ToDo implement the remaining scenarios listed below
-
-  #To implement this scenario you will need to use data tables
-    # https://cucumber.io/docs/cucumber/api/
   Scenario Outline: Add various amounts to Revolut account
     Given Danny has a starting balance of <startBalance>
     And Danny selects his DebitCard as his topUp method
